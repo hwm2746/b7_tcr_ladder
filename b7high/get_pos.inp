@@ -1,0 +1,31 @@
+* get_pos.inp: get location of Ca atoms of end-residues
+* Could do this in openmm, but I haven't messed with the syntax 
+*
+
+stream ../include.str
+set ifn @Md0a_incr8
+
+! crystal required before reading rst file
+calc Lx 227
+calc Ly 88
+set Lz 81.6426699990669
+
+crystal define orth @{lx} @{ly} @{lz}  90.0 90.0 90.0
+
+read psf card name @M.psf                                                   
+read coor dynr curr name ./rst/@{ifn}.rst                                   
+stream domain_def.str
+
+! the following needs coord to be present
+crystal build cutoff 13.0 noper 0
+
+stream nbond.str
+
+read coor comp dynr curr name ./rst/@{ifn}.rst
+
+coor comp stat sele hold_atom end
+set x0 ?xave
+coor comp stat sele pull_atom end
+set x1 ?xave
+
+stop 

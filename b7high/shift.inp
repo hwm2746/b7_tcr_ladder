@@ -1,0 +1,40 @@
+* shift.inp: Shift the periodic box to make the origin at a corner.
+* For OpenMM
+*
+
+stream ../../../include.str
+
+set ifn @Md0a_incr8
+
+!ioform extended
+
+! crystal required before reading rst file
+! Size of the PBC box. From d0 rst
+set Lx 227
+set Ly 88
+set Lz 81.6426699990669
+
+crystal define ortho @{Lx} @{Ly} @{Lz}  90.0 90.0 90.0
+
+read psf card name ../@M.psf
+read coor dynr curr name ../rst/@{ifn}.rst
+
+! the following needs coord to be present
+crystal build cutoff 13.0
+
+set x0 ?XTLA
+calc dx 0.5* @{x0}
+set y0 ?XTLB
+calc dy 0.5* @{y0}
+set z0 ?XTLC
+calc dz 0.5* @{z0}
+
+coor trans xdir @{dx} ydir @{dy} zdir @{dz} sele all end
+
+writ coor card name @{ifn}.cor
+* output of shift.inp
+*
+
+stop
+
+
