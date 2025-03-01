@@ -1,4 +1,4 @@
-## CHARMM input scripts used to perform laddered extensions for the B7 TCR simulations for the article published in https://elifesciences.org/reviewed-preprints/104280
+## CHARMM and input scripts used to perform laddered extensions and production runs in OpenMM for the B7 TCR simulations for the article published in https://elifesciences.org/reviewed-preprints/104280
 
 Authors: Ana C. Chang-Gonzalez & Wonmuk Hwang ( hwm@tamu.edu ). see LICENSE.
 
