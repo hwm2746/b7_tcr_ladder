@@ -1,4 +1,4 @@
-## CHARMM input scripts for laddered extension simulation and production run in OpenMM for the B7 TCR simulations for the article published in https://elifesciences.org/reviewed-preprints/104280
+## CHARMM and OpenMM input scripts for laddered extension simulations for the B7 T-cell receptor complexed with HLA-A2/Tax
 
 Authors: Ana C. Chang-Gonzalez & Wonmuk Hwang ( hwm@tamu.edu ). see LICENSE.
 
