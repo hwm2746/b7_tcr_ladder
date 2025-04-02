@@ -8,7 +8,8 @@ Ana C. Chang-Gonzalez, Aoi Akitsu, Robert J. Mallis, Matthew J. Lang, Ellis L. R
 
 **Load-based divergence in the dynamic allostery of two TCRs recognizing the same pMHC**
 
-*eLife* (2025).
+*eLife* **13**:RP104280 (2025).
+https://doi.org/10.7554/eLife.104280
 
 This repository condtains input scripts for laddered extensions in the above paper. For analysis scripts, see: https://github.com/hwm2746/a6tcr_anal_md
 
